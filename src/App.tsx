@@ -28,13 +28,15 @@ interface Translations {
 
 const translations: Translations = {
   es: {
+    // Business Name
+    businessName: "Belleza Pies",
+    
     // Navigation
     services: "Servicios",
     pricing: "Precios",
     about: "Nosotros",
     testimonials: "Testimonios",
     contact: "Contacto",
-    bookAppointment: "Agendar Cita",
     
     // Hero Section
     heroTitle: "Cuidado Profesional para",
@@ -49,13 +51,18 @@ const translations: Translations = {
     servicesSubtitle: "Ofrecemos una amplia gama de tratamientos especializados para el cuidado integral de tus pies",
     
     service1Title: "Pedi-Spa (Regular)",
-    service1Description: "Duración: 45 minutos. Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación profunda con productos naturales. Manejo con vapor de ozono.",
+    service1Duration: "Duración: 45 minutos",
+    service1Description: "Limpieza de uñas, retiro de piel muerta, hidratación y exfoliación profunda con productos naturales. Manejo con vapor de ozono.",
     
     service2Title: "Pedi-Spa (Parafina)",
-    service2Description: "Duración: 60 minutos. Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina 8–12 minutos.",
+    service2Duration: "Duración: 60 minutos",
+    service2Description: "Limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina 8–12 minutos.",
     
     service3Title: "Pedi-Spa (Premium)",
-    service3Description: "Duración: 75 minutos. Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina y masaje 15 minutos. Hidratación de ozono durante toda la sesión.",
+    service3Duration: "Duración: 75 minutos",
+    service3Description: "Limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina y masaje 15 minutos. Hidratación de ozono durante toda la sesión.",
+    
+    specialNote: "Si hay hongos en las uñas se procede a la limpieza total y tratamientos que se realizarán cada 8 días.",
     
     // Pricing Section
     pricingTitle: "Nuestros Precios",
@@ -68,8 +75,6 @@ const translations: Translations = {
     paraffinService: "Pedi-Spa (Parafina)",
     
     premiumService: "Pedi-Spa (Premium)",
-    
-    specialNote: "Nota: Si hay hongos en las uñas se procede a la limpieza total y tratamientos que se realizarán cada 8 días.",
     
     // Benefits Section
     whyChooseUs: "¿Por qué elegirnos?",
@@ -117,18 +122,18 @@ const translations: Translations = {
     // Footer
     footerDescription: "Tu centro de confianza para el cuidado profesional de pies. Experiencia, calidad y atención personalizada en cada sesión.",
     contactInfo: "Contacto",
-    schedule: "Horarios",
-    scheduleInfo: ["Lun - Vie: 9:00 - 19:00", "Sáb: 9:00 - 17:00", "Dom: Cerrado"],
     rightsReserved: "Todos los derechos reservados."
   },
   en: {
+    // Business Name
+    businessName: "Beauty Feet",
+    
     // Navigation
     services: "Services",
     pricing: "Pricing", 
     about: "About",
     testimonials: "Testimonials",
     contact: "Contact",
-    bookAppointment: "Book Appointment",
     
     // Hero Section
     heroTitle: "Professional Care for",
@@ -143,13 +148,18 @@ const translations: Translations = {
     servicesSubtitle: "We offer a wide range of specialized treatments for comprehensive foot care",
     
     service1Title: "Pedi-Spa (Regular)",
-    service1Description: "Duration: 45 minutes. Includes: nail cleaning, dead skin removal, hydration and deep exfoliation with natural products. Ozone steam treatment.",
+    service1Duration: "Duration: 45 minutes",
+    service1Description: "Nail cleaning, dead skin removal, hydration and deep exfoliation with natural products. Ozone steam treatment.",
     
     service2Title: "Pedi-Spa (Paraffin)",
-    service2Description: "Duration: 60 minutes. Includes: nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy treatment 8–12 minutes.",
+    service2Duration: "Duration: 60 minutes",
+    service2Description: "Nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy treatment 8–12 minutes.",
     
     service3Title: "Pedi-Spa (Premium)",
-    service3Description: "Duration: 75 minutes. Includes: nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy and 15-minute massage treatment. Ozone hydration throughout the entire session.",
+    service3Duration: "Duration: 75 minutes",
+    service3Description: "Nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy and 15-minute massage treatment. Ozone hydration throughout the entire session.",
+    
+    specialNote: "If there are nail fungus, we proceed with total cleaning and treatments that will be performed every 8 days.",
     
     // Pricing Section
     pricingTitle: "Our Pricing",
@@ -162,8 +172,6 @@ const translations: Translations = {
     paraffinService: "Pedi-Spa (Paraffin)",
     
     premiumService: "Pedi-Spa (Premium)",
-    
-    specialNote: "Note: If there are nail fungus, we proceed with total cleaning and treatments that will be performed every 8 days.",
     
     // Benefits Section
     whyChooseUs: "Why choose us?",
@@ -211,8 +219,6 @@ const translations: Translations = {
     // Footer
     footerDescription: "Your trusted center for professional foot care. Experience, quality and personalized attention in every session.",
     contactInfo: "Contact",
-    schedule: "Schedule",
-    scheduleInfo: ["Mon - Fri: 9:00 - 19:00", "Sat: 9:00 - 17:00", "Sun: Closed"],
     rightsReserved: "All rights reserved."
   }
 };
@@ -250,16 +256,19 @@ function App() {
     {
       icon: <Sparkles className="w-8 h-8" />,
       title: t('service1Title'),
+      duration: t('service1Duration'),
       description: t('service1Description')
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: t('service2Title'),
+      duration: t('service2Duration'),
       description: t('service2Description')
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: t('service3Title'),
+      duration: t('service3Duration'),
       description: t('service3Description')
     }
   ];
@@ -329,7 +338,7 @@ function App() {
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
-                Belleza Pies
+                {t('businessName')}
               </h1>
             </div>
             
@@ -365,10 +374,6 @@ function App() {
                   EN
                 </button>
               </div>
-              
-              <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-6 py-2 rounded-full hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
-                {t('bookAppointment')}
-              </button>
             </div>
           </div>
         </div>
@@ -455,11 +460,19 @@ function App() {
                 <div className="text-rose-500 mb-6 group-hover:text-pink-500 transition-colors duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-rose-600 font-semibold mb-4">{service.duration}</p>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <button className="bg-white text-rose-500 p-3 rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md">
-                  <ArrowRight className="w-5 h-5" />
-                </button>
+                
+                {/* Special Note */}
+                <div className="bg-rose-100 border-l-4 border-rose-500 p-4 rounded-r-lg">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5 mr-2" />
+                    <p className="text-sm text-rose-700 font-medium">
+                      <strong>{language === 'es' ? 'Nota importante:' : 'Important note:'}</strong> {t('specialNote')}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -480,7 +493,7 @@ function App() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div 
                 key={index}
@@ -505,21 +518,8 @@ function App() {
                     <span className="text-2xl font-bold text-pink-600">{plan.acrylicPrice}</span>
                   </div>
                 </div>
-                
-                <a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener noreferrer" className="w-full mt-6 bg-gradient-to-r from-rose-500 to-pink-500 text-white py-3 rounded-full font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 inline-block text-center">
-                  {t('bookNow')}
-                </a>
               </div>
             ))}
-          </div>
-          
-          <div className="bg-white p-6 rounded-2xl shadow-lg">
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="w-6 h-6 text-rose-500 flex-shrink-0 mt-1" />
-              <p className="text-gray-700 leading-relaxed">
-                <strong>{language === 'es' ? 'Nota:' : 'Note:'}</strong> {t('specialNote')}
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -530,8 +530,8 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Professional environment" 
+                src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Foot spa treatment" 
                 className="w-full h-96 object-cover rounded-3xl shadow-2xl"
               />
             </div>
@@ -649,16 +649,24 @@ function App() {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t('whatsapp')}</h3>
-              <p className="text-white/80 mb-6">{t('whatsappDescription')}</p>
-              <a 
-                href="https://wa.me/19146198124"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-rose-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-block"
-              >
-                {t('sendMessage')}
-              </a>
+              <h3 className="text-2xl font-bold text-white mb-4">{t('bookNow')}</h3>
+              <p className="text-white/80 mb-6">{language === 'es' ? 'Elige tu opción preferida' : 'Choose your preferred option'}</p>
+              <div className="space-y-3">
+                <a 
+                  href="https://wa.me/19146198124"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white text-rose-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  {t('whatsapp')}
+                </a>
+                <a 
+                  href="tel:+19146198124"
+                  className="block bg-white/20 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
+                >
+                  {language === 'es' ? 'Llamada' : 'Phone Call'}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -667,13 +675,13 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full flex items-center justify-center">
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold">Belleza Pies</h3>
+                <h3 className="text-2xl font-bold">{t('businessName')}</h3>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {t('footerDescription')}
@@ -685,7 +693,7 @@ function App() {
                 <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-110">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-110">
+                <a href="mailto:misolspa2025@gmail.com" className="bg-gray-800 p-3 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-110">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -704,32 +712,14 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-rose-400" />
-                  <span className="text-gray-300">info@bellezapies.com</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-bold mb-6">{t('schedule')}</h4>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-rose-400" />
-                  <div>
-                    {Array.isArray(t('scheduleInfo')) ? (
-                      (t('scheduleInfo') as string[]).map((schedule, index) => (
-                        <p key={index} className="text-gray-300">{schedule}</p>
-                      ))
-                    ) : (
-                      <p className="text-gray-300">{t('scheduleInfo')}</p>
-                    )}
-                  </div>
+                  <span className="text-gray-300">misolspa2025@gmail.com</span>
                 </div>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Belleza Pies. {t('rightsReserved')}</p>
+            <p>&copy; 2024 {t('businessName')}. {t('rightsReserved')}</p>
           </div>
         </div>
       </footer>
