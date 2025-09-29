@@ -48,32 +48,26 @@ const translations: Translations = {
     servicesTitle: "Nuestros Servicios",
     servicesSubtitle: "Ofrecemos una amplia gama de tratamientos especializados para el cuidado integral de tus pies",
     
-    service1Title: "Pedicura Clásica",
-    service1Description: "Tratamiento completo para el cuidado y embellecimiento de tus pies con productos naturales",
+    service1Title: "Pedi-Spa (Regular)",
+    service1Description: "Duración: 45 minutos. Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación profunda con productos naturales. Manejo con vapor de ozono.",
     
-    service2Title: "Pedi-Spa Premium",
-    service2Description: "Experiencia relajante con exfoliación, masaje y hidratación profunda de rodilla a pies",
+    service2Title: "Pedi-Spa (Parafina)",
+    service2Description: "Duración: 60 minutos. Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina 8–12 minutos.",
     
-    service3Title: "Tratamiento Especializado",
-    service3Description: "Cuidado especializado con terapia de parafina y ozono para problemas específicos",
+    service3Title: "Pedi-Spa (Premium)",
+    service3Description: "Duración: 75 minutos. Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina y masaje 15 minutos. Hidratación de ozono durante toda la sesión.",
     
     // Pricing Section
     pricingTitle: "Nuestros Precios",
     pricingSubtitle: "Elige el tratamiento que mejor se adapte a tus necesidades",
     
     regularService: "Pedi-Spa (Regular)",
-    regularDuration: "45 minutos",
-    regularIncludes: "Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación profunda con productos naturales. Manejo con vapor de ozono.",
     regularPolish: "Esmalte regular",
     acrylic: "Acri-pie",
     
     paraffinService: "Pedi-Spa (Parafina)",
-    paraffinDuration: "60 minutos", 
-    paraffinIncludes: "Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina 8–12 minutos.",
     
     premiumService: "Pedi-Spa (Premium)",
-    premiumDuration: "75 minutos",
-    premiumIncludes: "Incluye: limpieza de uñas, retiro de piel muerta, hidratación y exfoliación de rodilla a pies profunda con productos naturales. Manejo con terapia parafina y masaje 15 minutos. Hidratación de ozono durante toda la sesión.",
     
     specialNote: "Nota: Si hay hongos en las uñas se procede a la limpieza total y tratamientos que se realizarán cada 8 días.",
     
@@ -148,32 +142,26 @@ const translations: Translations = {
     servicesTitle: "Our Services",
     servicesSubtitle: "We offer a wide range of specialized treatments for comprehensive foot care",
     
-    service1Title: "Classic Pedicure",
-    service1Description: "Complete treatment for the care and beautification of your feet with natural products",
+    service1Title: "Pedi-Spa (Regular)",
+    service1Description: "Duration: 45 minutes. Includes: nail cleaning, dead skin removal, hydration and deep exfoliation with natural products. Ozone steam treatment.",
     
-    service2Title: "Premium Pedi-Spa",
-    service2Description: "Relaxing experience with exfoliation, massage and deep hydration from knee to feet",
+    service2Title: "Pedi-Spa (Paraffin)",
+    service2Description: "Duration: 60 minutes. Includes: nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy treatment 8–12 minutes.",
     
-    service3Title: "Specialized Treatment",
-    service3Description: "Specialized care with paraffin and ozone therapy for specific problems",
+    service3Title: "Pedi-Spa (Premium)",
+    service3Description: "Duration: 75 minutes. Includes: nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy and 15-minute massage treatment. Ozone hydration throughout the entire session.",
     
     // Pricing Section
     pricingTitle: "Our Pricing",
     pricingSubtitle: "Choose the treatment that best suits your needs",
     
     regularService: "Pedi-Spa (Regular)",
-    regularDuration: "45 minutes",
-    regularIncludes: "Includes: nail cleaning, dead skin removal, hydration and deep exfoliation with natural products. Ozone steam treatment.",
     regularPolish: "Regular polish",
     acrylic: "Acrylic",
     
     paraffinService: "Pedi-Spa (Paraffin)",
-    paraffinDuration: "60 minutes",
-    paraffinIncludes: "Includes: nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy treatment 8–12 minutes.",
     
     premiumService: "Pedi-Spa (Premium)",
-    premiumDuration: "75 minutes", 
-    premiumIncludes: "Includes: nail cleaning, dead skin removal, hydration and deep exfoliation from knee to feet with natural products. Paraffin therapy and 15-minute massage treatment. Ozone hydration throughout the entire session.",
     
     specialNote: "Note: If there are nail fungus, we proceed with total cleaning and treatments that will be performed every 8 days.",
     
@@ -279,22 +267,16 @@ function App() {
   const pricingPlans = [
     {
       title: t('regularService'),
-      duration: t('regularDuration'),
-      includes: t('regularIncludes'),
       regularPrice: '$50',
       acrylicPrice: '$70'
     },
     {
       title: t('paraffinService'),
-      duration: t('paraffinDuration'),
-      includes: t('paraffinIncludes'),
       regularPrice: '$80',
       acrylicPrice: '$100'
     },
     {
       title: t('premiumService'),
-      duration: t('premiumDuration'),
-      includes: t('premiumIncludes'),
       regularPrice: '$100',
       acrylicPrice: '$120'
     }
@@ -405,14 +387,22 @@ function App() {
                 {t('heroDescription')}
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <a 
+                  href="https://calendar.google.com/calendar/u/0/r?pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+                >
                   <Calendar className="w-5 h-5 inline mr-2" />
                   {t('scheduleAppointment')}
-                </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-rose-500 hover:text-rose-500 transition-all duration-300 transform hover:scale-105">
+                </a>
+                <a 
+                  href="tel:+19146198124"
+                  className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-rose-500 hover:text-rose-500 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                >
                   <Phone className="w-5 h-5 inline mr-2" />
                   {t('callNow')}
-                </button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -503,12 +493,7 @@ function App() {
               >
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
-                  <p className="text-rose-600 font-semibold">{plan.duration}</p>
                 </div>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  {plan.includes}
-                </p>
                 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-rose-50 rounded-lg">
@@ -521,9 +506,9 @@ function App() {
                   </div>
                 </div>
                 
-                <button className="w-full mt-6 bg-gradient-to-r from-rose-500 to-pink-500 text-white py-3 rounded-full font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
+                <a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener noreferrer" className="w-full mt-6 bg-gradient-to-r from-rose-500 to-pink-500 text-white py-3 rounded-full font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 inline-block text-center">
                   {t('bookNow')}
-                </button>
+                </a>
               </div>
             ))}
           </div>
