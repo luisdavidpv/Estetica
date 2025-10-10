@@ -48,7 +48,7 @@ const translations: Translations = {
     
     // Services Section
     servicesTitle: "Nuestros Servicios",
-    servicesSubtitle: "Ofrecemos una amplia gama de tratamientos especializados para el cuidado integral de tus pies",
+    servicesSubtitle: "Ofrecemos una amplia gama de tratamientos especializados y clínicos para el cuidado integral de tus pies",
     
     service1Title: "Pedi-Spa (Regular)",
     service1Duration: "Duración: 45 minutos",
@@ -87,7 +87,7 @@ const translations: Translations = {
     benefit2Description: "Solo utilizamos productos naturales de la más alta calidad para tu bienestar",
     
     benefit3Title: "Técnicas Avanzadas",
-    benefit3Description: "Terapias con ozono, parafina y técnicas modernas de relajación",
+    benefit3Description: "Terapias con ozono, parafina, sesiones de sauna y técnicas modernas de relajación",
     
     // Testimonials
     testimonialsTitle: "Lo que dicen nuestros clientes",
@@ -108,16 +108,9 @@ const translations: Translations = {
     contactTitle: "¡Agenda tu cita hoy!",
     contactSubtitle: "Estamos aquí para cuidar de ti. Elige la forma más conveniente para contactarnos.",
     
-    bookOnline: "Agendar Online",
-    bookOnlineDescription: "Reserva tu cita de forma rápida y sencilla",
-    bookNow: "Agendar Ahora",
-    
     callUs: "Llamar",
     callDescription: "Habla directamente con nosotros",
     
-    whatsapp: "WhatsApp",
-    whatsappDescription: "Chatea con nosotros al instante",
-    sendMessage: "Enviar Mensaje",
     
     // Footer
     footerDescription: "Tu centro de confianza para el cuidado profesional de pies. Experiencia, calidad y atención personalizada en cada sesión.",
@@ -145,7 +138,7 @@ const translations: Translations = {
     
     // Services Section
     servicesTitle: "Our Services",
-    servicesSubtitle: "We offer a wide range of specialized treatments for comprehensive foot care",
+    servicesSubtitle: "We offer a wide range of specialized and clinical treatments for comprehensive foot care",
     
     service1Title: "Pedi-Spa (Regular)",
     service1Duration: "Duration: 45 minutes",
@@ -184,7 +177,7 @@ const translations: Translations = {
     benefit2Description: "We only use the highest quality natural products for your wellbeing",
     
     benefit3Title: "Advanced Techniques", 
-    benefit3Description: "Ozone, paraffin therapies and modern relaxation techniques",
+    benefit3Description: "Ozone, paraffin therapies, sauna sessions and modern relaxation techniques",
     
     // Testimonials
     testimonialsTitle: "What our clients say",
@@ -205,16 +198,9 @@ const translations: Translations = {
     contactTitle: "Book your appointment today!",
     contactSubtitle: "We are here to take care of you. Choose the most convenient way to contact us.",
     
-    bookOnline: "Book Online",
-    bookOnlineDescription: "Reserve your appointment quickly and easily",
-    bookNow: "Book Now",
-    
     callUs: "Call",
     callDescription: "Speak directly with us",
     
-    whatsapp: "WhatsApp",
-    whatsappDescription: "Chat with us instantly",
-    sendMessage: "Send Message",
     
     // Footer
     footerDescription: "Your trusted center for professional foot care. Experience, quality and personalized attention in every session.",
@@ -392,15 +378,6 @@ function App() {
                 {t('heroDescription')}
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a 
-                  href="https://calendar.google.com/calendar/u/0/r?pli=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
-                >
-                  <Calendar className="w-5 h-5 inline mr-2" />
-                  {t('scheduleAppointment')}
-                </a>
                 <a 
                   href="tel:+19146198124"
                   className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-rose-500 hover:text-rose-500 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
@@ -613,23 +590,7 @@ function App() {
             <p className="text-xl opacity-90">{t('contactSubtitle')}</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Calendar className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t('bookOnline')}</h3>
-              <p className="text-white/80 mb-6">{t('bookOnlineDescription')}</p>
-              <a 
-                href="https://calendar.google.com/calendar/u/0/r?pli=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-white text-rose-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                {t('bookNow')}
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
             
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -649,16 +610,14 @@ function App() {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t('bookNow')}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">{language === 'es' ? 'Agendar Ahora' : 'Book Now'}</h3>
               <p className="text-white/80 mb-6">{language === 'es' ? 'Elige tu opción preferida' : 'Choose your preferred option'}</p>
               <div className="space-y-3">
                 <a 
-                  href="https://wa.me/19146198124"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="sms:+19146198124"
                   className="block bg-white text-rose-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
                 >
-                  {t('whatsapp')}
+                  {language === 'es' ? 'Mensaje de Texto' : 'Text Message'}
                 </a>
                 <a 
                   href="tel:+19146198124"
