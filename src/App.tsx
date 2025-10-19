@@ -646,7 +646,7 @@ function App() {
                 {t('footerDescription')}
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-110">
+                <a href="https://www.instagram.com/misol_spa_/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-110">
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-110">
