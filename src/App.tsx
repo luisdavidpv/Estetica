@@ -29,7 +29,7 @@ interface Translations {
 const translations: Translations = {
   es: {
     // Business Name
-    businessName: "Belleza Pies",
+    businessName: "Belleza y Salud para Tus Pies",
     
     // Navigation
     services: "Servicios",
