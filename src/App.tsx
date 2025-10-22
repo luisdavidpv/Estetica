@@ -119,7 +119,7 @@ const translations: Translations = {
   },
   en: {
     // Business Name
-    businessName: "Beauty Feet",
+    businessName: "Beauty and Health for Your Feet",
     
     // Navigation
     services: "Services",
@@ -323,7 +323,7 @@ function App() {
               <div className="w-10 h-10 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
                 {t('businessName')}
               </h1>
             </div>
